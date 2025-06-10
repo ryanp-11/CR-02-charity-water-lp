@@ -2,14 +2,14 @@
 
 Primary Colors:
 - Yellow:     #FFC907
-- Blue:       #2E9DF7
+- Blue:       #003366
 
 Secondary Colors:
 - Light Blue: #8BD1CB
 - Green:      #4FCB53
-- Orange:     #FF902A
+- Tan:        #FFF7E1
 - Red:        #F5402C
-- Dark Green: #159A48
+- Black:      #1A1A1A
 - Pink:       #F16061
 
 Fonts:
@@ -25,8 +25,8 @@ Fonts:
 
 /* Set up the main font and background color for the whole page */
 body {
-  background-color: #f4f8fb; /* Soft light blue for a fresh look */
-  font-family: 'Avenir', 'Proxima Nova', Arial, sans-serif;
+  background-color: #1A1A1A; /* Very dark background for the whole page */
+  font-family: Georgia, 'Proxima Nova', Arial, sans-serif; /* Changed to Georgia */
   margin: 0;
   padding: 0;
   color: #222;
@@ -43,31 +43,28 @@ section {
 
 /* Hero Section Styles */
 .hero {
-  position: relative; /* Needed for overlay */
-  /* Set a background image that covers the whole section */
-  background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80');
-  background-size: cover;      /* Make the image cover the whole area */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat;
-  color: #fff;                 /* White text for contrast */
-  text-align: center;          /* Center the text */
-  padding: 60px 20px;          /* Add space above and below */
-  border-radius: 0 0 16px 16px; /* Only round bottom corners */
-
-  /* Add a dark overlay for better text readability */
-  /* This uses a simple linear-gradient overlay */
-  background-blend-mode: darken;
-  background-color: rgba(46, 157, 247, 0.45); /* Blue overlay */
+  background-color: #1A1A1A; /* Very dark background for the first section */
+  color: #fff;               /* White text for good contrast */
+  text-align: center;        /* Center the text in the section */
+  padding: 60px 20px;        /* Add space above and below the content */
+  border-radius: 0 0 16px 16px; /* Round only the bottom corners */
 }
 
 /* Make the headline bold and modern */
 .hero h1 {
-  font-size: 2.5em;
-  font-weight: bold;
-  letter-spacing: 1px;
-  margin-bottom: 15px;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.15); /* Soft shadow for readability */
+  font-size: 2.5em;         /* Make the headline big */
+  font-weight: bold;        /* Make the text bold */
+  letter-spacing: 1px;      /* Add a little space between letters */
+  margin-bottom: 8px;       /* Less space below the headline */
+  margin-top: 0;            /* No extra space above the headline */
+  font-family: 'Proxima Nova', Arial, sans-serif; /* Use Proxima Nova font */
 }
+
+/*
+  Beginner comment:
+  - margin-bottom controls the space below the headline.
+  - A smaller margin-bottom makes the headline and subheadline closer together.
+*/
 
 /* Style the subheadline */
 .hero p {
@@ -76,20 +73,42 @@ section {
   text-shadow: 0 1px 4px rgba(0,0,0,0.12);
 }
 
-/* Story Section Styles */
-.story {
-  background-color: #8BD1CB; /* Secondary Light Blue */
-  color: #222;
-  text-align: center;
-  padding: 30px 20px;
+/* Layout for the hero section: image left, text right */
+.hero-row {
+  /* Use flex to put image and text side by side */
+  display: flex;
+  align-items: center;    /* Vertically center image and text */
+  justify-content: center;/* Center the whole row */
+  gap: 24px;              /* Space between image and text */
 }
 
-/* Add accent color to section headings */
-h2 {
-  color: #2E9DF7; /* Primary blue */
-  margin-top: 0;
-  font-weight: bold;
+/* Style for the image on the left */
+.hero-img {
+  width: 100%;                /* Make the image fill the height of the section */
+  max-width: 340px;           /* Set a max width so it doesn't get too big */
+  height: auto;               /* Keep the image's aspect ratio */
+  border-radius: 12px;        /* Round all corners of the image */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10); /* Soft shadow */
+  display: block;             /* Remove extra space below image */
+  margin: 0;                  /* Remove default margin */
 }
+
+/*
+  Beginner comment:
+  - border-radius: 12px; makes all four corners of the image rounded.
+*/
+
+/* Style for the text on the right */
+.hero-text {
+  text-align: center;     /* Center the text inside this box */
+  margin-left: 72px;      /* Move the text a little to the right */
+}
+
+/*
+  Beginner comment:
+  - The margin-left property adds space to the left of the text, moving it to the right.
+  - You can change 24px to a different number to move it more or less.
+*/
 
 /* Call-to-Action Section Styles */
 .call-to-action {
@@ -97,15 +116,6 @@ h2 {
   color: #222;
   text-align: center;
   padding: 30px 20px;
-}
-
-/* Style the impact story image */
-.impact-image {
-  width: 100%;
-  max-width: 320px;
-  border-radius: 10px;
-  margin-bottom: 16px;
-  box-shadow: 0 2px 8px rgba(46, 157, 247, 0.10);
 }
 
 /* Donate Button Styles */
@@ -123,6 +133,7 @@ h2 {
   transition: background 0.3s, transform 0.2s;
   border: none;
   cursor: pointer;
+  font-family: 'Proxima Nova', Arial, sans-serif; /* Use Proxima Nova for the button */
 }
 
 /* Change button color when hovered */
@@ -135,6 +146,16 @@ h2 {
 section {
   margin-bottom: 20px;
 }
+
+/* Make all main headings use Proxima Nova font */
+h1, h2 {
+  font-family: 'Proxima Nova', Arial, sans-serif; /* Use Proxima Nova for headings */
+}
+
+/* Beginner comment:
+   - This makes all <h1> and <h2> headings use the Proxima Nova font.
+   - If Proxima Nova is not available, it will use Arial or another sans-serif font.
+*/
 
 /* 
   Media Queries for Responsive Design
@@ -177,6 +198,15 @@ section {
     width: 90%;    /* Make image take up most of the width */
     max-width: 220px;
   }
+
+  .hero-row {
+    flex-direction: column; /* Stack image and text vertically */
+    gap: 12px;
+  }
+  .hero-img {
+    max-width: 100%;
+    border-radius: 12px 12px 0 0; /* Round top corners on mobile */
+  }
 }
 
 /* This media query applies styles when the screen is wider than 600px (like on tablets and computers) */
@@ -187,12 +217,36 @@ section {
     align-items: center;     /* Vertically center items */
     justify-content: center; /* Center the whole group */
     gap: 28px;               /* Space between image and text */
-    text-align: left;
-    max-width: 800px;
-    margin: 0 auto;
   }
 
   .impact-image {
-    width: 300px;
+    width: 50%;    /* Make image take up half of the width */
+    max-width: 300px;
+  }
+
+  .impact-text {
+    width: 50%;    /* Make text take up half of the width */
+    padding-left: 16px; /* Add space between image and text */
+  }
+
+  /* Stack the donation form on top of the image on small screens */
+  @media (max-width: 600px) {
+    .donation-form {
+      display: block; /* Stack elements vertically */
+      width: 100%;    /* Full width on small screens */
+    }
+
+    .donation-image {
+      width: 100%;    /* Image full width */
+      height: auto;   /* Maintain aspect ratio */
+      border-radius: 12px 12px 0 0; /* Round top corners */
+    }
+
+    .donation-content {
+      padding: 16px;  /* Add padding around content */
+      background: #fff; /* White background for contrast */
+      border-radius: 0 0 12px 12px; /* Round bottom corners */
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Soft shadow */
+    }
   }
 }
