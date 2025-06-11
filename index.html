@@ -20,19 +20,31 @@
             <span style="white-space: nowrap;">be the change you create</span>
           </h1>
           <!-- Subheadline -->
-          <p>Join us in bringing safe, clean water to communities in need.</p>
+           <br>
+          <p>
+            100% of your donation brings clean water<br>
+            to people who need it most
+          </p>
         </div>
       </div>
     </section>
 
     <!-- Real-World Impact Story Section -->
     <section class="impact-story">
-        <!-- Section headline -->
-        <h2>Real Impact: Meet Amina</h2>
-        <!-- Impact story text -->
-        <p>
-            Amina used to walk miles every day to collect water for her family. Thanks to your support, her village now has a clean water well. Amina can go to school and her family is healthier and happier.
-        </p>
+      <div class="impact-row">
+        <!-- Impact story text on the left -->
+        <div class="impact-text">
+          <h2>Real Impact: Meet Amina</h2>
+          <p>
+            Amina used to walk miles every day to collect water for her family.<br>
+            Thanks to your support, her village now has a clean water well.<br>
+            Amina can go to school and her family is healthier and happier.
+          </p>
+        </div>
+        <!-- Image on the right -->
+        <!-- Beginner comment: This image shows Amina's story. The CSS will make its height match the section. -->
+        <img src="visual image 3.jpg" alt="Amina's story" class="impact-img" style="margin-right:16px;">
+      </div>
     </section>
 
     <!-- Call-to-Action Section: This encourages visitors to take action -->
@@ -41,5 +53,69 @@
         <p>Your support can help save lives. Every donation brings us closer to a world with clean water for all.</p>
         <a href="#" class="donate-button">Donate Now</a>
     </section>
+
+    <style>
+        /* Center the headline and text in the second section */
+        .impact-story h2,
+        .impact-story p {
+          text-align: center; /* This centers the text */
+        }
+
+        /*
+          Beginner comment:
+          - text-align: center; makes the text appear in the middle of the section.
+          - This is applied to both the h2 and p in the .impact-story section.
+        */
+
+        /* Simple layout: text on the left, image on the right */
+        .impact-row {
+          display: flex;           /* Put text and image side by side */
+          align-items: center;     /* Vertically center them */
+          justify-content: flex-start; /* Start items from the left */
+          gap: 24px;               /* Space between text and image */
+          min-height: 260px;       /* Shorter height for the section */
+        }
+
+        /* Text on the left */
+        .impact-text {
+          flex: 1;                 /* Take up available space */
+          text-align: left;        /* Align text to the left */
+        }
+
+        /* Image on the right */
+        .impact-img {
+          height: 180px;           /* Shorter image height to match section */
+          max-height: 420px;        /* Prevent the image from getting too tall */
+          width: auto;              /* Keep the image's shape correct */
+          max-width: 340px;         /* Prevent the image from getting too wide */
+          border-radius: 12px;      /* Rounded corners */
+          box-shadow: 0 2px 8px rgba(0,0,0,0.10); /* Soft shadow */
+          display: block;
+          margin: 16px;             /* Add space so the image does not touch the border */
+          margin-left: 0;           /* No extra space on the left (since it's already spaced by gap) */
+        }
+
+        /* Responsive: stack on small screens */
+        @media (max-width: 600px) {
+          .impact-row {
+            flex-direction: column; /* Stack vertically */
+            gap: 12px;
+          }
+          .impact-text {
+            text-align: center;     /* Center text on small screens */
+          }
+          .impact-img {
+            width: 90%;
+            max-width: 220px;
+          }
+        }
+
+        /*
+          Beginner comments:
+          - We use display: flex to put the text on the left and the image on the right.
+          - On small screens, the text and image will stack vertically.
+          - text-align: left; keeps the h2 and p on the left side.
+        */
+    </style>
 </body>
 </html>

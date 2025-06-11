@@ -85,7 +85,7 @@ section {
 /* Style for the image on the left */
 .hero-img {
   width: 100%;                /* Make the image fill the height of the section */
-  max-width: 340px;           /* Set a max width so it doesn't get too big */
+  max-width: 440px;           /* Set a max width so it doesn't get too big */
   height: auto;               /* Keep the image's aspect ratio */
   border-radius: 12px;        /* Round all corners of the image */
   box-shadow: 0 2px 8px rgba(0,0,0,0.10); /* Soft shadow */
@@ -229,7 +229,19 @@ h1, h2 {
     padding-left: 16px; /* Add space between image and text */
   }
 
-  /* Stack the donation form on top of the image on small screens */
+  /* Make the second section (impact story) bigger */
+.impact-story {
+  padding: 32px 12px;    /* Less space inside the section */
+  min-height: 260px;     /* Make the section shorter */
+}
+
+/*
+  Beginner comment:
+  - padding adds space inside the section, making it look bigger.
+  - min-height sets a minimum height so the section is always tall enough.
+*/
+
+/* Stack the donation form on top of the image on small screens */
   @media (max-width: 600px) {
     .donation-form {
       display: block; /* Stack elements vertically */
@@ -248,5 +260,89 @@ h1, h2 {
       border-radius: 0 0 12px 12px; /* Round bottom corners */
       box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Soft shadow */
     }
+  }
+}
+
+/* Make the image in the second section match the height of the section */
+.impact-img {
+  /* The image will try to fill the height of the section, but not get too big */
+  height: 100%;            /* Fill the height of the section */
+  max-height: 420px;       /* Match the min-height of .impact-story */
+  width: auto;             /* Keep the image's shape correct */
+  max-width: 440px;        /* Prevent the image from getting too wide */
+  border-radius: 12px;     /* Rounded corners */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10); /* Soft shadow */
+  display: block;
+  margin: 0;
+}
+
+/*
+  Beginner comment:
+  - height: 100% makes the image try to fill the height of the section.
+  - max-height: 420px keeps the image from getting too tall.
+  - width: auto keeps the image's shape correct.
+  - max-width: 440px keeps the image from getting too wide.
+*/
+
+/* Make the second section's height match the height of the image */
+.impact-story {
+  /* The min-height is removed so the section will fit the image naturally */
+  display: flex;              /* Use flex to help the section fit its content */
+  flex-direction: column;     /* Stack children vertically */
+  justify-content: center;    /* Center content vertically */
+  padding: 0;                 /* Remove extra padding for a snug fit */
+}
+
+/* Make sure the row fills the section's height */
+.impact-row {
+  height: 100%;               /* Row fills the section's height */
+}
+
+/* Layout for the impact section: image left, text right */
+.impact-row {
+  display: flex;              /* Put image and text side by side */
+  align-items: center;        /* Vertically center them */
+  justify-content: center;    /* Center the whole row */
+  gap: 12px;                  /* Space between image and text */
+  flex-direction: row-reverse;/* Image on the right, text on the left */
+}
+
+/*
+  Beginner comment:
+  - flex-direction: row-reverse; puts the image on the right and the text on the left.
+*/
+
+/* Style for the image on the left in the second section */
+.impact-img {
+  height: 220px;              /* Set a smaller fixed height for the image */
+  width: auto;                /* Keep the image's shape correct */
+  max-width: 220px;           /* Prevent the image from getting too wide */
+  border-radius: 12px;        /* Rounded corners */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10); /* Soft shadow */
+  display: block;
+  margin: 0;
+  margin-left: -16px;         /* Move the image a little to the left */
+  /* Beginner comment:
+     - margin-left: -16px; moves the image slightly to the left.
+     - You can change this number to move it more or less.
+  */
+}
+
+/* Responsive: stack image and text on small screens */
+@media (max-width: 600px) {
+  .impact-row {
+    flex-direction: column;   /* Stack vertically */
+    gap: 12px;               /* Less space between image and text */
+  }
+
+  .impact-img {
+    max-width: 100%;         /* Image fills the width of the container */
+    height: auto;            /* Maintain aspect ratio */
+    border-radius: 12px 12px 0 0; /* Round top corners */
+  }
+
+  .impact-text {
+    text-align: center;      /* Center text on small screens */
+    padding-left: 0;         /* Remove left padding */
   }
 }
