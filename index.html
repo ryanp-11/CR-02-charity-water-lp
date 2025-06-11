@@ -40,6 +40,8 @@
             Thanks to your support, her village now has a clean water well.<br>
             Amina can go to school and her family is healthier and happier.
           </p>
+          <!-- Beginner comment: This button lets users read more about Amina's story -->
+          <button class="impact-btn">Her Story</button>
         </div>
         <!-- Image on the right -->
         <!-- Beginner comment: This image shows Amina's story. The CSS will make its height match the section. -->
@@ -68,12 +70,8 @@
         */
 
         /* Simple layout: text on the left, image on the right */
-        .impact-row {
-          display: flex;           /* Put text and image side by side */
-          align-items: center;     /* Vertically center them */
-          justify-content: flex-start; /* Start items from the left */
-          gap: 24px;               /* Space between text and image */
-          min-height: 260px;       /* Shorter height for the section */
+        
+                /* Shorter height for the section */
         }
 
         /* Text on the left */
@@ -93,6 +91,22 @@
           display: block;
           margin: 16px;             /* Add space so the image does not touch the border */
           margin-left: 0;           /* No extra space on the left (since it's already spaced by gap) */
+        }
+
+        /* Style for the button under the impact story */
+        .impact-btn {
+          margin-top: 12px;           /* Space above the button */
+          padding: 8px 20px;          /* Space inside the button */
+          background-color: #ffc907;  /* Blue background */
+          color: #1a1a1a;               /* White text */
+          border: none;               /* No border */
+          border-radius: 6px;         /* Rounded corners */
+          cursor: pointer;            /* Pointer cursor on hover */
+          font-size: 16px;            /* Slightly bigger text */
+        }
+        .impact-btn:hover {
+          background-color: #1a1a1a;  /* Slightly darker blue on hover */
+          color: #fff7e1;
         }
 
         /* Responsive: stack on small screens */
@@ -116,6 +130,14 @@
           - On small screens, the text and image will stack vertically.
           - text-align: left; keeps the h2 and p on the left side.
         */
+
+        /* Make the text and image sit side by side (text left, image right) */
+        .impact-row {
+          display: flex;           /* Use flexbox for layout */
+          flex-direction: row;     /* Row direction: text on left, image on right */
+          align-items: center;     /* Vertically center items */
+          gap: 24px;               /* Space between text and image */
+        }
     </style>
 </body>
 </html>

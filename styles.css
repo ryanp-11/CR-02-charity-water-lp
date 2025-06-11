@@ -34,7 +34,7 @@ body {
 
 /* Add a slight shadow and rounded corners to each section for depth */
 section {
-  background: #fff; /* White background for sections */
+  background: #fff7e1; /* White background for sections */
   border-radius: 12px; /* Rounded corners */
   box-shadow: 0 2px 8px rgba(46, 157, 247, 0.07); /* Soft blue shadow */
   margin: 24px 10px; /* Space between sections */
@@ -44,7 +44,7 @@ section {
 /* Hero Section Styles */
 .hero {
   background-color: #1A1A1A; /* Very dark background for the first section */
-  color: #fff;               /* White text for good contrast */
+  color: #fff7e1;               /* White text for good contrast */
   text-align: center;        /* Center the text in the section */
   padding: 60px 20px;        /* Add space above and below the content */
   border-radius: 0 0 16px 16px; /* Round only the bottom corners */
@@ -256,7 +256,7 @@ h1, h2 {
 
     .donation-content {
       padding: 16px;  /* Add padding around content */
-      background: #fff; /* White background for contrast */
+      background: #fff7e1; /* White background for contrast */
       border-radius: 0 0 12px 12px; /* Round bottom corners */
       box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Soft shadow */
     }
@@ -320,7 +320,7 @@ h1, h2 {
   border-radius: 12px;        /* Rounded corners */
   box-shadow: 0 2px 8px rgba(0,0,0,0.10); /* Soft shadow */
   display: block;
-  margin: 0;
+  margin: 32;
   margin-left: -16px;         /* Move the image a little to the left */
   /* Beginner comment:
      - margin-left: -16px; moves the image slightly to the left.
@@ -344,5 +344,20 @@ h1, h2 {
   .impact-text {
     text-align: center;      /* Center text on small screens */
     padding-left: 0;         /* Remove left padding */
+  }
+}
+
+/* Center the button under the paragraph in the impact section */
+.impact-text {
+  display: flex;           /* Use flexbox for layout */
+  flex-direction: column;  /* Stack children vertically */
+  align-items: center;     /* Center children horizontally */
+}
+
+/* Make sure the paragraph stays left-aligned on large screens */
+@media (min-width: 601px) {
+  .impact-text p {
+    text-align: left;      /* Left align the paragraph */
+    width: 100%;           /* Take full width for proper alignment */
   }
 }
