@@ -117,11 +117,11 @@ section {
   text-align: center;
   padding: 30px 20px;
 }
-
+/* Style for the button under the call-to action section */
 .donate-button {
   display: inline-block;
-  background-color: #fff7e1; /* Tan background */
-  color: #222;               /* Dark text for contrast */
+  background-color: #1a1a1a; 
+  color: #1a1a1a;               
   padding: 14px 32px;
   text-decoration: none;
   border-radius: 6px;
