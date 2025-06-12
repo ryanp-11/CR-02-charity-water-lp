@@ -120,8 +120,8 @@ section {
 
 .donate-button {
   display: inline-block;
-  background-color: #fff7e1;    
-  color: #222;                    /* Dark text for contrast */
+  background-color: #fff7e1; /* Tan background */
+  color: #222;               /* Dark text for contrast */
   padding: 14px 32px;
   text-decoration: none;
   border-radius: 6px;
