@@ -118,10 +118,10 @@ section {
   padding: 30px 20px;
 }
 /* Style for the button under the call-to action section */
-.donate-button {
+.cta-btn {
   display: inline-block;
-  background-color: #1a1a1a; 
-  color: #1a1a1a;               
+  background-color: #1a1a1a;  /* Very dark background for Donate Now */
+  color: #fff7e1;             /* Light text for contrast */
   padding: 14px 32px;
   text-decoration: none;
   border-radius: 6px;
@@ -393,9 +393,55 @@ h1, h2 {
   font-weight: bold;                              /* Bold text like h2 */
 }
 
-/* Make the Donate Now button text match the h2 heading style */
+/* Make the Donate Now button the same size as the Her Story button */
 .donate-button {
-  font-family: 'Proxima Nova', Arial, sans-serif; /* Match h2 font */
-  font-size: 1.5em;                               /* Match h2 size */
-  font-weight: bold;                              /* Bold like h2 */
+  font-family: 'Proxima Nova', Arial, sans-serif; 
+  font-size: 1.5em;         /* Match Her Story button size */
+  font-weight: bold;        /* Bold text */
+  padding: 10px 28px;       /* Same padding as .her-story-btn */
+  border-radius: 6px;       /* Rounded corners */
+  border: none;             /* No border */
+  background-color: #1a1a1a;
+  color: #fff7e1;           /* White text for contrast */
+  cursor: pointer;          /* Pointer cursor on hover */
+  box-shadow: 0 2px 8px rgba(255, 201, 7, 0.10); /* Soft shadow */
+  margin-top: 16px;         /* Space above the button */
 }
+
+/* Make the Her Story button the same size as the Learn More button */
+.her-story-btn {
+  font-family: 'Proxima Nova', Arial, sans-serif;
+  font-size: 1.5em;         /* Match Learn More button size */
+  font-weight: bold;        /* Bold text */
+  padding: 10px 28px;       /* Same padding as .hero-btn */
+  border-radius: 6px;       /* Rounded corners */
+  border: none;             /* No border */
+  background-color: #FFC907;/* Same background as Learn More */
+  color: #222;              /* Same text color */
+  cursor: pointer;          /* Pointer cursor on hover */
+  box-shadow: 0 2px 8px rgba(255, 201, 7, 0.10); /* Soft shadow */
+  margin-top: 16px;         /* Space above the button */
+}
+
+/* Optional: Add hover effect like Learn More button */
+.her-story-btn:hover {
+  background-color: #1a1a1a;
+   color: #ffc907
+}
+
+/* Center and add spacing for the charity: water logo under the Learn More button */
+.logo-under-learn-more {
+  display: block;           /* Make the image a block element */
+  margin-left: auto;        /* Center horizontally */
+  margin-right: auto;       /* Center horizontally */
+  margin-top: 36px;         /* More space above the logo */
+  height: 25px;             /* Example: small logo */
+}
+
+/*
+  Beginner comment:
+  - Use the class "logo-under-learn-more" on the <img> tag to center the logo under the button.
+  - margin-top adds space above the logo.
+  - margin-left and margin-right set to auto will center the image.
+  - height sets the logo size.
+*/
